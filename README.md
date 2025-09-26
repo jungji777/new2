@@ -79,4 +79,4 @@ En EmailJS puedes configurar:
 - ✅ Información detallada
 - ✅ Navegación con teclado
 - ✅ Responsive design
-- ✅ Lazy loading de imágenes
+- ✅ Lazy loading de imágenes# new2
