@@ -41,7 +41,7 @@ const Experience = () => {
   const education = [
     {
       degree: "Artificial Intelligence Engineer",
-      institution: "UNIVERSITY OF OXFORD",
+      institution: "University of Oxford",
       period: "2022 - Actualidad",
       description: "Estudio de algoritmos y técnicas para que los sistemas aprendan sin ser explícitamente programados."
     },
