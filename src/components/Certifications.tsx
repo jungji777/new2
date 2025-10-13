@@ -5,6 +5,7 @@ import CertificationModal from './CertificationModal';
 const Certifications = () => {
   const [selectedCertification, setSelectedCertification] = React.useState<any>(null);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [showAllAchievements, setShowAllAchievements] = React.useState(false);
 
   // Load Credly embed script when component mounts
   useEffect(() => {
@@ -121,6 +122,9 @@ const Certifications = () => {
     setIsModalOpen(false);
     setSelectedCertification(null);
   };
+
+  const visibleAchievements = showAllAchievements ? achievements : achievements.slice(0, 4);
+  const hasMoreAchievements = achievements.length > 4;
 
   const colorClasses = {
     blue: "bg-blue-100 text-blue-700 border-blue-200",
@@ -267,8 +271,8 @@ const Certifications = () => {
             Otras Certificaciones y Logros
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {achievements.map((achievement, index) => (
-              <div 
+            {visibleAchievements.map((achievement, index) => (
+              <div
                 key={index}
                 className="glass-card p-6 hover-lift animate-fadeInUp"
                 style={{ animationDelay: `${index * 100}ms` }}
@@ -284,20 +288,20 @@ const Certifications = () => {
                     </div>
                   )}
                 </div>
-                
+
                 <h4 className="text-lg font-bold text-gray-900 mb-2">
                   {achievement.title}
                 </h4>
                 <p className="text-gray-600 mb-3">
                   {achievement.description}
                 </p>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
                     <Calendar size={14} className="mr-1" />
                     <span>{achievement.date}</span>
                   </div>
-                  <button 
+                  <button
                     onClick={() => handleCertificationClick({...achievement, fullDescription: achievement.description, skills: []})}
                     className="text-blue-600 hover:text-blue-700 transition-colors duration-200 hover:scale-110"
                     title="Ver detalles"
@@ -308,6 +312,20 @@ const Certifications = () => {
               </div>
             ))}
           </div>
+
+          {/* Show More/Less Button */}
+          {hasMoreAchievements && (
+            <div className="flex justify-center mt-8">
+              <button
+                onClick={() => setShowAllAchievements(!showAllAchievements)}
+                className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                aria-expanded={showAllAchievements}
+                aria-label={showAllAchievements ? 'Mostrar menos certificaciones' : 'Mostrar más certificaciones'}
+              >
+                {showAllAchievements ? 'Ver menos' : 'Ver más'}
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Future Certifications Placeholder */}
