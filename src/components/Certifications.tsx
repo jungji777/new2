@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Award, Calendar, ExternalLink, Shield, Star, Trophy, GraduationCap, Brain } from 'lucide-react';
+import { Award, Calendar, ExternalLink, Shield, Star, Trophy, GraduationCap, Brain, Zap, Code, Database, Cloud, BookOpen, Users, Target } from 'lucide-react';
 import CertificationModal from './CertificationModal';
 
 const Certifications = () => {
@@ -58,6 +58,134 @@ const Certifications = () => {
       description: "Fundamentals Certified",
       date: "2024",
       color: "blue",
+      verified: true
+    },
+    {
+      icon: <Cloud className="w-6 h-6" />,
+      title: "Google Cloud Associate",
+      description: "Cloud Engineer Certification",
+      date: "2024",
+      color: "blue",
+      verified: true
+    },
+    {
+      icon: <Code className="w-6 h-6" />,
+      title: "React Advanced Patterns",
+      description: "Expert Level Development",
+      date: "2024",
+      color: "green",
+      verified: true
+    },
+    {
+      icon: <Database className="w-6 h-6" />,
+      title: "PostgreSQL Developer",
+      description: "Advanced Database Design",
+      date: "2024",
+      color: "blue",
+      verified: true
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Docker Essentials",
+      description: "Container Technology",
+      date: "2023",
+      color: "green",
+      verified: true
+    },
+    {
+      icon: <BookOpen className="w-6 h-6" />,
+      title: "TypeScript Mastery",
+      description: "Advanced Type Systems",
+      date: "2024",
+      color: "purple",
+      verified: true
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: "DevOps Fundamentals",
+      description: "CI/CD Pipeline Management",
+      date: "2023",
+      color: "orange",
+      verified: true
+    },
+    {
+      icon: <Code className="w-6 h-6" />,
+      title: "Vue.js Professional",
+      description: "Frontend Framework Expertise",
+      date: "2023",
+      color: "green",
+      verified: false
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Scrum Master Certified",
+      description: "Agile Project Management",
+      date: "2023",
+      color: "blue",
+      verified: true
+    },
+    {
+      icon: <Database className="w-6 h-6" />,
+      title: "MongoDB Advanced",
+      description: "NoSQL Database Design",
+      date: "2024",
+      color: "green",
+      verified: true
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "API Design Best Practices",
+      description: "RESTful & GraphQL APIs",
+      date: "2024",
+      color: "purple",
+      verified: true
+    },
+    {
+      icon: <Cloud className="w-6 h-6" />,
+      title: "Kubernetes Administration",
+      description: "Container Orchestration",
+      date: "2023",
+      color: "blue",
+      verified: false
+    },
+    {
+      icon: <BookOpen className="w-6 h-6" />,
+      title: "Web Security Essentials",
+      description: "Application Security",
+      date: "2024",
+      color: "orange",
+      verified: true
+    },
+    {
+      icon: <Code className="w-6 h-6" />,
+      title: "Node.js Backend Development",
+      description: "Server-Side JavaScript",
+      date: "2024",
+      color: "green",
+      verified: true
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: "Cloud Architecture",
+      description: "Scalable System Design",
+      date: "2023",
+      color: "blue",
+      verified: true
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Technical Leadership",
+      description: "Team Management Skills",
+      date: "2024",
+      color: "purple",
+      verified: true
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: "Linux Professional Institute",
+      description: "Linux System Administration",
+      date: "2023",
+      color: "orange",
       verified: true
     }
   ];
