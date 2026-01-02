@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Award, Calendar, ExternalLink, Shield, Star, Trophy, GraduationCap, Brain, Zap, Code, Database, Cloud, BookOpen, Users, Target } from 'lucide-react';
+import { Award, Calendar, ExternalLink, Shield, Star, Trophy, GraduationCap, Brain, Zap, Code, Database, Cloud, BookOpen, Users, Target, ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 import CertificationModal from './CertificationModal';
 
 const Certifications = () => {
@@ -281,117 +282,195 @@ const Certifications = () => {
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
             {premiumCertifications.map((cert, index) => (
-              <div 
+              <motion.div
                 key={index}
-                className="glass-card p-6 hover-lift animate-fadeInUp relative overflow-hidden"
-                style={{ animationDelay: `${index * 200}ms` }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                whileHover={{ y: -10 }}
+                className="glass-card p-6 relative overflow-hidden group rounded-2xl"
               >
                 {/* Prestige indicator */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600"></div>
-                
-                <div className="flex flex-col lg:flex-row gap-6">
+                <motion.div
+                  className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  style={{ originX: 0 }}
+                ></motion.div>
+
+                {/* Animated background glow */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-transparent to-orange-400/10 opacity-0 group-hover:opacity-100 rounded-2xl"
+                  transition={{ duration: 0.3 }}
+                ></motion.div>
+
+                <div className="relative z-10 flex flex-col lg:flex-row gap-6">
                   {/* Certificate Image */}
-                  <div className="flex-shrink-0">
-                    <div className="w-full lg:w-48 h-32 lg:h-36 rounded-xl overflow-hidden shadow-lg bg-white p-2">
-                      <img 
-                        src={cert.image} 
+                  <motion.div
+                    className="flex-shrink-0"
+                    whileHover={{ scale: 1.05, rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="w-full lg:w-48 h-32 lg:h-36 rounded-xl overflow-hidden shadow-lg bg-white p-2 group-hover:shadow-2xl transition-shadow duration-300">
+                      <motion.img
+                        src={cert.image}
                         alt={`${cert.title} - ${cert.institution}`}
                         className="w-full h-full object-contain"
                         loading="lazy"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.3 }}
                       />
                     </div>
-                  </div>
-                  
+                  </motion.div>
+
                   {/* Certificate Details */}
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className={`p-2 rounded-xl border ${colorClasses[cert.color as keyof typeof colorClasses]}`}>
+                      <motion.div
+                        className={`p-2 rounded-xl border ${colorClasses[cert.color as keyof typeof colorClasses]}`}
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ duration: 0.3 }}
+                      >
                         {cert.icon}
-                      </div>
-                      <div className="flex items-center text-green-600 text-xs">
+                      </motion.div>
+                      <motion.div
+                        className="flex items-center text-green-600 text-xs bg-green-50 px-2 py-1 rounded-full"
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
+                      >
                         <Shield size={14} className="mr-1" />
                         <span>Verificada</span>
-                      </div>
+                      </motion.div>
                     </div>
-                    
-                    <h4 className="text-lg font-bold text-gray-900 mb-1">
+
+                    <h4 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors duration-300">
                       {cert.title}
                     </h4>
-                    <p className="text-blue-600 font-semibold mb-3">
+                    <p className="text-blue-600 font-semibold mb-3 group-hover:text-blue-700 transition-colors duration-300">
                       {cert.institution}
                     </p>
                     <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                       {cert.description}
                     </p>
-                    
+
                     <div className="flex items-center justify-between">
                       <div className="flex items-center text-sm text-gray-500">
                         <Calendar size={14} className="mr-1" />
                         <span>{cert.date}</span>
                       </div>
-                      <button 
+                      <motion.button
                         onClick={() => handleCertificationClick(cert)}
-                        className="text-blue-600 hover:text-blue-700 transition-colors duration-200 hover:scale-110"
+                        className="text-blue-600 hover:text-blue-700 transition-colors duration-200"
+                        whileHover={{ scale: 1.2, rotate: 15 }}
+                        whileTap={{ scale: 0.9 }}
                         title="Ver certificación completa"
                       >
-                        <ExternalLink size={16} />
-                      </button>
+                        <ExternalLink size={18} />
+                      </motion.button>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
         {/* Featured AWS Certification with Credly Badge */}
-        <div className="mb-16">
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Certificación AWS Destacada
           </h3>
-          <div className="glass-card p-8 text-center max-w-2xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+          <motion.div
+            className="glass-card p-8 text-center max-w-2xl mx-auto relative overflow-hidden group rounded-2xl"
+            whileHover={{ boxShadow: "0 20px 60px rgba(59, 130, 246, 0.3)" }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Animated border glow */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 rounded-2xl"
+              transition={{ duration: 0.3 }}
+            ></motion.div>
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8">
               {/* Credly Badge Container */}
-              <div className="certification-badge-container">
-                <div 
-                  data-iframe-width="150" 
-                  data-iframe-height="270" 
-                  data-share-badge-id="0ac08a2f-fdfa-4067-8875-835719ad6b84" 
+              <motion.div
+                className="certification-badge-container"
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+                whileHover={{ scale: 1.1, rotate: 5 }}
+              >
+                <div
+                  data-iframe-width="150"
+                  data-iframe-height="270"
+                  data-share-badge-id="0ac08a2f-fdfa-4067-8875-835719ad6b84"
                   data-share-badge-host="https://www.credly.com"
                   className="credly-badge"
                 ></div>
-              </div>
-              
+              </motion.div>
+
               {/* Certification Details */}
-              <div className="flex-1 text-left">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mr-4">
+              <motion.div
+                className="flex-1 text-left"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <motion.div
+                  className="flex items-center mb-4"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <motion.div
+                    className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 text-white rounded-2xl flex items-center justify-center mr-4"
+                    whileHover={{ rotate: 10, scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     <Shield size={24} />
-                  </div>
+                  </motion.div>
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900">AWS Certified</h4>
-                    <p className="text-blue-600 font-medium">Solutions Architect Associate</p>
+                    <h4 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                      AWS Certified
+                    </h4>
+                    <p className="text-blue-600 font-medium group-hover:text-blue-700 transition-colors duration-300">
+                      Solutions Architect Associate
+                    </p>
                   </div>
-                </div>
-                
-                <p className="text-gray-600 mb-4">
-                  Certificación que valida mi experiencia en el diseño de sistemas distribuidos 
-                  escalables y seguros en Amazon Web Services, incluyendo arquitecturas de alta 
+                </motion.div>
+
+                <p className="text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300">
+                  Certificación que valida mi experiencia en el diseño de sistemas distribuidos
+                  escalables y seguros en Amazon Web Services, incluyendo arquitecturas de alta
                   disponibilidad y mejores prácticas de seguridad.
                 </p>
-                
-                <div className="flex items-center text-sm text-gray-500">
-                  <Calendar size={16} className="mr-2" />
+
+                <motion.div
+                  className="flex items-center text-sm text-gray-500 gap-2"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  <Calendar size={16} />
                   <span>Obtenida en 2024</span>
-                  <span className="mx-2">•</span>
-                  <span className="flex items-center">
+                  <span>•</span>
+                  <motion.span
+                    className="flex items-center"
+                    whileHover={{ scale: 1.1 }}
+                  >
                     <Shield size={16} className="mr-1 text-green-500" />
                     Verificada
-                  </span>
-                </div>
-              </div>
+                  </motion.span>
+                </motion.div>
+              </motion.div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Additional Certifications Grid */}
         <div className="mb-12">
@@ -399,81 +478,156 @@ const Certifications = () => {
             Otras Certificaciones y Logros
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {visibleAchievements.map((achievement, index) => (
-              <div
+            {visibleAchievements.map((item, index) => (
+              <motion.div
                 key={index}
-                className="glass-card p-6 hover-lift animate-fadeInUp"
-                style={{ animationDelay: `${index * 100}ms` }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.2)" }}
+                className="relative bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-xl p-6 border border-gray-200 shadow-lg overflow-hidden group"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`p-3 rounded-2xl border ${colorClasses[achievement.color as keyof typeof colorClasses]}`}>
-                    {achievement.icon}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-blue-500/5 group-hover:via-purple-500/5 group-hover:to-pink-500/5 rounded-xl"
+                  transition={{ duration: 0.3 }}
+                ></motion.div>
+
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between mb-4">
+                    <motion.div
+                      className={`p-3 rounded-2xl border ${colorClasses[item.color as keyof typeof colorClasses]}`}
+                      whileHover={{ scale: 1.15, rotate: 10 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {item.icon}
+                    </motion.div>
+                    {item.verified && (
+                      <motion.div
+                        className="flex items-center text-green-600 text-xs bg-green-50 px-2 py-1 rounded-full"
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.05 + 0.1 }}
+                      >
+                        <Shield size={14} className="mr-1" />
+                        <span>Verificada</span>
+                      </motion.div>
+                    )}
                   </div>
-                  {achievement.verified && (
-                    <div className="flex items-center text-green-600 text-xs">
-                      <Shield size={14} className="mr-1" />
-                      <span>Verificada</span>
+
+                  <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                    {item.title}
+                  </h4>
+                  <p className="text-gray-600 mb-3 group-hover:text-gray-700 transition-colors duration-300">
+                    {item.description}
+                  </p>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Calendar size={14} className="mr-1" />
+                      <span>{item.date}</span>
                     </div>
-                  )}
-                </div>
-
-                <h4 className="text-lg font-bold text-gray-900 mb-2">
-                  {achievement.title}
-                </h4>
-                <p className="text-gray-600 mb-3">
-                  {achievement.description}
-                </p>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Calendar size={14} className="mr-1" />
-                    <span>{achievement.date}</span>
+                    <motion.button
+                      onClick={() => handleCertificationClick({...item, fullDescription: item.description, skills: []})}
+                      className="text-blue-600 hover:text-blue-700 transition-colors duration-200"
+                      whileHover={{ scale: 1.3, rotate: 15 }}
+                      whileTap={{ scale: 0.9 }}
+                      title="Ver detalles"
+                    >
+                      <ExternalLink size={18} />
+                    </motion.button>
                   </div>
-                  <button
-                    onClick={() => handleCertificationClick({...achievement, fullDescription: achievement.description, skills: []})}
-                    className="text-blue-600 hover:text-blue-700 transition-colors duration-200 hover:scale-110"
-                    title="Ver detalles"
-                  >
-                    <ExternalLink size={16} />
-                  </button>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Show More/Less Button */}
           {hasMoreAchievements && (
-            <div className="flex justify-center mt-8">
-              <button
+            <motion.div
+              className="flex justify-center mt-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.button
                 onClick={() => setShowAllAchievements(!showAllAchievements)}
-                className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-xl shadow-lg overflow-hidden group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 aria-expanded={showAllAchievements}
                 aria-label={showAllAchievements ? 'Mostrar menos certificaciones' : 'Mostrar más certificaciones'}
               >
-                {showAllAchievements ? 'Ver menos' : 'Ver más'}
-              </button>
-            </div>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100"
+                  transition={{ duration: 0.3 }}
+                ></motion.div>
+
+                <div className="relative flex items-center justify-center gap-2">
+                  <span className="transition-all duration-300">
+                    {showAllAchievements ? 'Ver menos' : 'Ver más'}
+                  </span>
+                  <motion.div
+                    animate={{ rotate: showAllAchievements ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDown size={20} />
+                  </motion.div>
+                </div>
+              </motion.button>
+            </motion.div>
           )}
         </div>
 
         {/* Future Certifications Placeholder */}
-        <div className="glass-card p-8 text-center border-2 border-dashed border-gray-300">
-          <div className="w-16 h-16 bg-gray-100 text-gray-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <motion.div
+          className="relative glass-card p-8 text-center border-2 border-dashed border-gray-300 rounded-2xl overflow-hidden group"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          whileHover={{ borderColor: "rgb(59, 130, 246)", boxShadow: "0 20px 60px rgba(59, 130, 246, 0.15)" }}
+        >
+          {/* Animated dashed border glow */}
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 rounded-2xl"
+            transition={{ duration: 0.3 }}
+          ></motion.div>
+
+          <motion.div
+            className="relative z-10 w-16 h-16 bg-gradient-to-br from-blue-100 to-cyan-100 text-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            whileHover={{ rotate: 0, scale: 1.1 }}
+          >
             <Award size={32} />
-          </div>
-          <h4 className="text-lg font-semibold text-gray-700 mb-2">
+          </motion.div>
+
+          <h4 className="text-lg font-semibold text-gray-700 mb-2 group-hover:text-blue-600 transition-colors duration-300">
             Próximas Certificaciones
           </h4>
-          <p className="text-gray-500 mb-4">
+          <p className="text-gray-500 mb-4 group-hover:text-gray-600 transition-colors duration-300">
             Actualmente preparándome para obtener nuevas certificaciones en:
           </p>
           <div className="flex flex-wrap justify-center gap-2">
-            <span className="badge">Kubernetes (CKA)</span>
-            <span className="badge">Docker Certified Associate</span>
-            <span className="badge">Terraform Associate</span>
-            <span className="badge">Google Cloud Professional</span>
+            {[
+              "Kubernetes (CKA)",
+              "Docker Certified Associate",
+              "Terraform Associate",
+              "Google Cloud Professional"
+            ].map((cert, index) => (
+              <motion.span
+                key={index}
+                className="badge"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                whileHover={{ scale: 1.1, backgroundColor: "rgb(59, 130, 246)", color: "white" }}
+              >
+                {cert}
+              </motion.span>
+            ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Certification Modal */}
         <CertificationModal
