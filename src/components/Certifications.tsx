@@ -72,6 +72,7 @@ const Certifications = () => {
     {
       icon: <Code className="w-6 h-6" />,
       title: "React Advanced Patterns",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767344116/descargaaa_lczsv0.png",
       description: "Expert Level Development",
       date: "2024",
       color: "green",
