@@ -33,20 +33,22 @@ const Certifications = () => {
       title: "AWS Data Engineer",
       description: "AWS Data Engineer - Associate",
       date: "2025",
-      color: "gold",
+      color: "blue",
       verified: true
     },
     {
       icon: <Trophy className="w-6 h-6" />,
-      title: "Google Analytics",
+      title: "Amazon EMR",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Certified Professional",
-      date: "2023",
+      date: "2025",
       color: "green",
       verified: true
     },
     {
       icon: <Star className="w-6 h-6" />,
       title: "GitHub Copilot",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Early Adopter Program",
       date: "2023",
       color: "purple",
@@ -64,6 +66,7 @@ const Certifications = () => {
     {
       icon: <Cloud className="w-6 h-6" />,
       title: "Google Cloud Associate",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Cloud Engineer Certification",
       date: "2024",
       color: "blue",
@@ -81,6 +84,7 @@ const Certifications = () => {
     {
       icon: <Database className="w-6 h-6" />,
       title: "PostgreSQL Developer",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Advanced Database Design",
       date: "2024",
       color: "blue",
@@ -89,6 +93,7 @@ const Certifications = () => {
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Docker Essentials",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Container Technology",
       date: "2023",
       color: "green",
@@ -97,6 +102,7 @@ const Certifications = () => {
     {
       icon: <BookOpen className="w-6 h-6" />,
       title: "TypeScript Mastery",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Advanced Type Systems",
       date: "2024",
       color: "purple",
@@ -105,6 +111,7 @@ const Certifications = () => {
     {
       icon: <Target className="w-6 h-6" />,
       title: "DevOps Fundamentals",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "CI/CD Pipeline Management",
       date: "2023",
       color: "orange",
@@ -113,6 +120,7 @@ const Certifications = () => {
     {
       icon: <Code className="w-6 h-6" />,
       title: "Vue.js Professional",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Frontend Framework Expertise",
       date: "2023",
       color: "green",
@@ -121,6 +129,7 @@ const Certifications = () => {
     {
       icon: <Users className="w-6 h-6" />,
       title: "Scrum Master Certified",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Agile Project Management",
       date: "2023",
       color: "blue",
@@ -129,6 +138,7 @@ const Certifications = () => {
     {
       icon: <Database className="w-6 h-6" />,
       title: "MongoDB Advanced",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "NoSQL Database Design",
       date: "2024",
       color: "green",
@@ -137,6 +147,7 @@ const Certifications = () => {
     {
       icon: <Zap className="w-6 h-6" />,
       title: "API Design Best Practices",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "RESTful & GraphQL APIs",
       date: "2024",
       color: "purple",
@@ -145,6 +156,7 @@ const Certifications = () => {
     {
       icon: <Cloud className="w-6 h-6" />,
       title: "Kubernetes Administration",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Container Orchestration",
       date: "2023",
       color: "blue",
@@ -153,6 +165,7 @@ const Certifications = () => {
     {
       icon: <BookOpen className="w-6 h-6" />,
       title: "Web Security Essentials",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Application Security",
       date: "2024",
       color: "orange",
@@ -161,6 +174,7 @@ const Certifications = () => {
     {
       icon: <Code className="w-6 h-6" />,
       title: "Node.js Backend Development",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Server-Side JavaScript",
       date: "2024",
       color: "green",
@@ -169,6 +183,7 @@ const Certifications = () => {
     {
       icon: <Target className="w-6 h-6" />,
       title: "Cloud Architecture",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Scalable System Design",
       date: "2023",
       color: "blue",
@@ -177,6 +192,7 @@ const Certifications = () => {
     {
       icon: <Users className="w-6 h-6" />,
       title: "Technical Leadership",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Team Management Skills",
       date: "2024",
       color: "purple",
@@ -185,6 +201,7 @@ const Certifications = () => {
     {
       icon: <Award className="w-6 h-6" />,
       title: "Linux Professional Institute",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
       description: "Linux System Administration",
       date: "2023",
       color: "orange",
