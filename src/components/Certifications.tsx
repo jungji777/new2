@@ -30,10 +30,10 @@ const Certifications = () => {
       icon: <Shield className="w-6 h-6" />,
       image:
 "https://res.cloudinary.com/df5jie5rz/image/upload/v1758860009/eCertificate_spo0n3.png",
-      title: "AWS Certified",
-      description: "Solutions Architect Associate",
+      title: "AWS Data Engineer",
+      description: "AWS Data Engineer - Associate",
       date: "2025",
-      color: "blue",
+      color: "gold",
       verified: true
     },
     {
