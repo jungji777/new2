@@ -39,7 +39,7 @@ const Certifications = () => {
     {
       icon: <Trophy className="w-6 h-6" />,
       title: "Amazon EMR",
-      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767346571/aws-amazonEMR_n7x8bt.pdf",
       description: "Certified Professional",
       date: "2025",
       color: "green",
