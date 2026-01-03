@@ -121,7 +121,7 @@ const Certifications = () => {
     {
       icon: <Code className="w-6 h-6" />,
       title: "Vue.js Professional",
-      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767414020/Captura_de_pantalla_2026-01-02_a_la_s_22.15.34_cqau17.png",
       description: "Frontend Framework Expertise",
       date: "2023",
       color: "green",
