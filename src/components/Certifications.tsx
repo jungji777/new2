@@ -101,11 +101,11 @@ const Certifications = () => {
       verified: true
     },
     {
-      icon: <BookOpen className="w-6 h-6" />,
-      title: "TypeScript Mastery",
-      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
-      description: "Advanced Type Systems",
-      date: "2024",
+      icon: <Database className="w-6 h-6" />,
+      title: "AWS Fundamentals",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767413975/Captura_de_pantalla_2026-01-02_a_la_s_22.12.38_pbmqa0.png",
+      description: "AWS Fundamentals",
+      date: "2025",
       color: "purple",
       verified: true
     },
