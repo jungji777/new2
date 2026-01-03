@@ -46,7 +46,7 @@ const Experience = () => {
       description: "Programa integral de 8 semanas de la Universidad de Oxford que abarca los fundamentos y aplicaciones avanzadas de la Inteligencia Artificial. El programa incluye módulos sobre machine learning, deep learning, procesamiento de lenguaje natural, visión por computadora, ética en IA, y estrategias de implementación empresarial. Los participantes desarrollan proyectos prácticos y casos de estudio reales, trabajando con las últimas tecnologías y frameworks de IA."
     },
     {
-      degree: "Ingeniería en Sistemas Computacionales",
+      degree: "Applied Generative AI for Digital Transformation",
       institution: "MIT (Massachusetts Institute of Technology)",
       period: "2023 - 2023",
       description: "Programa especializado en IA Generativa aplicada a la transformación digital, incluyendo GPT, LLMs y aplicaciones empresariales.."
