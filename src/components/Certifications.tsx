@@ -65,7 +65,7 @@ const Certifications = () => {
       verified: true
     },
     {
-      icon: <Cloud className="w-6 h-6" />,
+      icon: <Brain className="w-6 h-6" />,
       title: "Microsft AI Services",
       image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767414021/Captura_de_pantalla_2026-01-02_a_la_s_22.13.53_tnpon3.png",
       description: "Cloud Engineer Certification",
