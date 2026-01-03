@@ -251,7 +251,7 @@ const Certifications = () => {
       skills: ["Machine Learning", "Oracle Cloud Infrastructure (OCI)", "Python for data science", "Jupyter Notebooks in the Cloud", "Big Data", "Model Deployment", "TensorFlow", "PyTorch", "pipelines"],
       credentialId: "102000968OCI25DSOCP",
       verificationUrl: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=6D6208211CE34E7E8BFB77FF8C1E9EB81E27FAD1BBAFC556E001E974D9DA6512",
-      icon: <Brain className="w-6 h-6" />,
+      icon: <Database className="w-6 h-6" />,
       color: "blue",
       verified: true,
       prestige: "high"
