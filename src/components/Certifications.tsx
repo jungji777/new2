@@ -37,7 +37,7 @@ const Certifications = () => {
       verified: true
     },
     {
-      icon: <Trophy className="w-6 h-6" />,
+      icon: <Cloud className="w-6 h-6" />,
       image:
         "https://res.cloudinary.com/df5jie5rz/image/upload/v1767414031/Captura_de_pantalla_2026-01-02_a_la_s_19.27.00_zjltmf.png",
       title: "Amazon EMR",
