@@ -92,11 +92,11 @@ const Certifications = () => {
       verified: true
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Docker Essentials",
-      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
-      description: "Container Technology",
-      date: "2023",
+      icon: <Database className="w-6 h-6" />,
+      title: "AWS Serverless Analytics",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767413975/Captura_de_pantalla_2026-01-02_a_la_s_22.12.48_ztk9mg.png",
+      description: "AWS Serverless Analytics",
+      date: "2025",
       color: "green",
       verified: true
     },
