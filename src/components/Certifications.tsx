@@ -56,7 +56,7 @@ const Certifications = () => {
       verified: true
     },
     {
-      icon: <Script className="w-6 h-6" />,
+      icon: <Brain className="w-6 h-6" />,
       title: "Microsoft Azure AI",
       image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767414030/Captura_de_pantalla_2026-01-02_a_la_s_22.16.22_r4ux4t.png",
       description: "Running a training script as a command job in Azure Machine Learning",
