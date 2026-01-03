@@ -48,9 +48,9 @@ const Certifications = () => {
     },
     {
       icon: <Star className="w-6 h-6" />,
-      title: "GitHub Copilot",
-      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
-      description: "Early Adopter Program",
+      title: "Microsoft AI Foundry",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767413974/Captura_de_pantalla_2026-01-02_a_la_s_22.13.34_uc5kyx.png",
+      description: "Choosing and implementing models from the model catalog in the Azure AI Foundry portal",
       date: "2023",
       color: "purple",
       verified: false
