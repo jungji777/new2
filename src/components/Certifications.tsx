@@ -53,13 +53,13 @@ const Certifications = () => {
       description: "Choosing and implementing models from the model catalog in the Azure AI Foundry portal",
       date: "2023",
       color: "purple",
-      verified: false
+      verified: true
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Microsoft Azure",
-      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
-      description: "Fundamentals Certified",
+      title: "Microsoft Azure AI",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767414030/Captura_de_pantalla_2026-01-02_a_la_s_22.16.22_r4ux4t.png",
+      description: "Running a training script as a command job in Azure Machine Learning",
       date: "2024",
       color: "blue",
       verified: true
