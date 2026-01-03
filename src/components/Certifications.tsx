@@ -27,7 +27,7 @@ const Certifications = () => {
 
   const achievements = [
     {
-      icon: <Shield className="w-6 h-6" />,
+      icon: <Code className="w-6 h-6" />,
       image:
 "https://res.cloudinary.com/df5jie5rz/image/upload/v1758860009/eCertificate_spo0n3.png",
       title: "AWS Data Engineer",
