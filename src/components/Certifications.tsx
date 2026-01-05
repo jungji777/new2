@@ -614,7 +614,7 @@ const Certifications = () => {
           <motion.div
             className="relative z-10 w-16 h-16 bg-gradient-to-br from-blue-100 to-cyan-100 text-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-4"
             initial={{ rotate: 0 }}
-            animate={{ rotate: 360 }}
+            animate={{ rotate: 0 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             whileHover={{ rotate: 0, scale: 1.1 }}
           >

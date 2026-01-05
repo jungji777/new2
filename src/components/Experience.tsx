@@ -48,7 +48,7 @@ const Experience = () => {
     {
       degree: "Oracle Cloud Infrastructure 2025 Certified Data Science Professional",
       institution: "Oracle University",
-      period: "2024 - 2024",
+      period: "2024 - 2025",
       description: "Certificación oficial de Oracle que valida conocimientos avanzados en ciencia de datos utilizando Oracle Cloud Infrastructure (OCI). El programa cubre técnicas de machine learning, análisis predictivo, procesamiento de datos a gran escala, y automatización de flujos de trabajo en entornos cloud. Los profesionales certificados demuestran dominio en el uso de herramientas como OCI Data Science, Jupyter Notebooks, y Python para el desarrollo, entrenamiento y despliegue de modelos de machine learning en la nube. La certificación incluye casos prácticos centrados en la resolución de problemas empresariales reales mediante inteligencia artificial."
     },
     {
