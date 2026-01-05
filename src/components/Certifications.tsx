@@ -83,7 +83,7 @@ const Certifications = () => {
       verified: true
     },
     {
-      icon: <Database className="w-6 h-6" />,
+      icon: <BrainCircuit className="w-6 h-6" />,
       title: "Microsoft Azure AI Foundry",
       image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767414021/Captura_de_pantalla_2026-01-02_a_la_s_22.16.28_knm5qn.png",
       description: "Tuning a language model with Azure AI Foundry",
@@ -92,7 +92,7 @@ const Certifications = () => {
       verified: true
     },
     {
-      icon: <Database className="w-6 h-6" />,
+      icon: <Server className="w-6 h-6" />,
       title: "AWS Serverless Analytics",
       image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767413975/Captura_de_pantalla_2026-01-02_a_la_s_22.12.48_ztk9mg.png",
       description: "AWS Serverless Analytics",
@@ -110,11 +110,11 @@ const Certifications = () => {
       verified: true
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "DevOps Fundamentals",
-      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1758859501/Logros_-_csarbetancourth-8949___Microsoft_Learn_lu3krs.png",
-      description: "CI/CD Pipeline Management",
-      date: "2023",
+      icon: <Brain className="w-6 h-6" />,
+      title: "Microsoft Azure AI Foundry",
+      image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767413974/Captura_de_pantalla_2026-01-02_a_la_s_22.13.34_uc5kyx.png",
+      description: "Choosing and implementing models from the model catalog in the Azure AI Foundry portal",
+      date: "2025",
       color: "orange",
       verified: true
     },
