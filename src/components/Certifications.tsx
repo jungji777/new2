@@ -83,7 +83,7 @@ const Certifications = () => {
       verified: true
     },
     {
-      icon: <BrainCircuit className="w-6 h-6" />,
+      icon: <Brain className="w-6 h-6" />,
       title: "Microsoft Azure AI Foundry",
       image: "https://res.cloudinary.com/df5jie5rz/image/upload/v1767414021/Captura_de_pantalla_2026-01-02_a_la_s_22.16.28_knm5qn.png",
       description: "Tuning a language model with Azure AI Foundry",
